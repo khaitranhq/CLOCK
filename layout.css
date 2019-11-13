@@ -1,20 +1,22 @@
 body{
     background-color: #ff022b;
+    text-align: center;
 }
 
 h1{
     font-family:'Bungee Shade', cursive;
     font-size: 60px;
-    margin-bottom: -40px;
+    margin-top: -30px;
+    margin-bottom: -60px;
 }
 
 h4{
     font-family: 'Bungee', cursive;
     font-size: 30px;
-    margin-bottom: -50px;
+    margin-bottom: -40px;
 }
 
-h3{
+span{
     font-family: 'Bungee', cursive;
     font-size: 40px;
 }
