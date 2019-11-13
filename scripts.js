@@ -1,4 +1,4 @@
-var clock = document.querySelector('.clock');
+var clock = document.getElementById('clock');
 
 var showTime = function(){
     var currentDate = new Date();
@@ -17,6 +17,8 @@ var showTime = function(){
     if (seconds < 10) seconds = '0' + seconds;
 
     var time = hours + ":" + minutes + ":" + seconds;
+    if (morning) time += ' AM!!';
+    else time += ' PM!!';
     clock.textContent = time;
 }
 
