@@ -1,4 +1,5 @@
 body{
+    font-family: 'Bungee', cursive;
     background-color: #ff022b;
     text-align: center;
 }
@@ -11,12 +12,25 @@ h1{
 }
 
 h4{
-    font-family: 'Bungee', cursive;
     font-size: 30px;
     margin-bottom: -40px;
 }
 
 span{
-    font-family: 'Bungee', cursive;
     font-size: 40px;
+}
+
+footer{
+    font-size: 10px;
+}
+
+#imgCat{
+    max-width: 30em;
+    max-height: 20em;
+    margin-bottom: -30px;
+}
+
+#timeEvent{
+    margin: -70px 0px 100px 0px;
+    font-size: 30px;
 }
