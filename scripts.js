@@ -65,4 +65,3 @@ var party = function(){
 }
 
 partyButton.addEventListener("click", party);
-party();
