@@ -1,4 +1,5 @@
 var clock = document.getElementById('clock');
+var inParty = false;
 
 var showTime = function(){
     var currentDate = new Date();
@@ -32,15 +33,36 @@ var updateTime = function(){
 
     var imgCat = document.getElementById('imgCat');
     var timeEvent = document.getElementById('timeEvent');
-    for(var i = 0 ; i < 5 ; ++i)
-        if (currentDate.getHours() >= time[i][0] && currentDate.getHours() < time[i][1]){
-            console.log(1)
-            imgCat.src = link[i];
-            timeEvent.textContent = message[i];
-            break;
-        }
+
+    if (inParty)
+        imgCat.src = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/partyTime.jpg";
+    else        
+        for(var i = 0 ; i < 5 ; ++i)
+            if (currentDate.getHours() >= time[i][0] && currentDate.getHours() < time[i][1]){
+                console.log(1)
+                imgCat.src = link[i];
+                timeEvent.textContent = message[i];
+                break;
+            }
     showTime();
 }
 
 updateTime();
 setInterval(updateTime, 1000);
+
+var partyButton = document.getElementById('partyButton');
+var party = function(){
+    var imgCat = document.getElementById('imgCat');
+    if (inParty){
+        inParty = false;
+        partyButton.innerText = "PARTY OVER";
+        partyButton.style.backgroundColor = "#66ccff";
+    } else {
+        inParty = true;
+        partyButton.innerText = "PARTY TIME";
+        partyButton.style.backgroundColor = "#111";
+    }
+}
+
+partyButton.addEventListener("click", party);
+party();
